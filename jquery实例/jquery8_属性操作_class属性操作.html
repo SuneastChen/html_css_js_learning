@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style type='text/css'>
+.div1{background:yellow}
+.div2{color:red}
+
+</style>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('给div1增加一个类属性')
+	    	$('#div1').addClass('div1')   //addClass  注意大小写  追加属性class的值为div1
+	    	$('#div1').addClass('div2')   //继续追加属性class的值为div1
+	    	alert('移除div1的类属性')
+	    	$('#div1').removeClass('div1')
+
+
+
+	    
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	<div id="div1">我是div1</div>
+
+
+</body>
+</html>

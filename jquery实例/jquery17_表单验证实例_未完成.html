@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	$('#button1').bind('click',function(){
+	    		var v_userName=$.trim($('#username').val())   //$.trim('string') 去掉字符两边的空格
+	    		if (v_userName=='' || v_userName.length<6) {
+	    			alert('登陆名不能为空,且长度必须在6-12之间')
+	    			return false;	    		
+	    	    }
+
+	    	    var v_userPswd=$.trim($('#userpswd').val())
+	    	    if (v_userPswd=='' || v_userPswd.length<6) {
+	    	    	alert('密码不能为空,且长度必须在6-12之间');
+	    	    	return false
+	    	    }
+
+	    	    var v_userPswd2=$.trim($('#confirmpswd').val());
+	    	    if (v_userPswd2 != v_userPswd) {
+	    	    	alert('两次密码不一致!')
+	    	    	return false
+	    	    }
+	    	
+
+	    	})
+	    
+	    })
+
+	    //验证:1.用户名不能为空
+	    //2.用户名长度6--12位
+	    //3.密码不能为空
+	    //4.密码长度至少6位
+	    //5.两次密码相同
+
+
+
+	    
+
+	</script>
+</head>
+<body>
+	<form action="adduser" method="post">
+		<pre> 用户名  <input type="text" name="username" id="username" maxlength="12"></pre>
+
+		<pre> 密  码  <input type="text" name="userpswd" id="userpswd" maxlength="12"></pre>
+
+		<pre>确认密码 <input type="text" name="confirmpswd" id="confirmpswd" maxlength="12"></pre>
+
+		<input type="submit" value="注册" id="button1">
+
+
+	</form>
+
+</body>
+</html>

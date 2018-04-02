@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 此为引入式css,还有一种嵌入式也是加在head中 -->
+	<link rel="stylesheet" href="789.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+alert('我放在html之前,先弹出!')
+var a=3;
+var a2='hello'
+var $a='world'
+console.log(a,a2,$a)
+
+//-----------------------变量类型:--------------------------
+//数值型
+var a=12;
+var b=3.14;
+
+//字符串型
+var c='hello';
+var d="世界!";
+console.log(c,d)
+
+//布尔型
+var e=true;   //true 要小写
+
+//null型,对象不存在
+var f=null;
+
+//undefined型,基本型未定义
+var g=undefined;
+
+//数组型
+var arr=['a',3,'你好',true]
+console.log(arr[0]);
+
+//字典对象类型
+var h={name:'老王',age:30}
+console.log(h.name)
+console.log(h['name'])  //与python相同key为字符串需要加''
+
+
+//定义时key可以加'',也可以不加,但python必须加
+var h={'name':'老王','age':30}
+console.log(h.name)
+console.log(h['name'])
+
+//-----------------------运算符--------------------------    
+var a3=5;
+var a4=2;
+console.log(a3%a4);
+if (a3>a4){console.log(a3+'>'+a4)}
+a4 +=1
+console.log(a4)
+a5=a4 in arr
+console.log(a5)
+console.log(!a3 || a4)
+
+
+//"+"一旦遇到非数字,则变成拼接运算
+console.log(a3+a4)   //7
+console.log('hello'+3+'world')  //hello3world
+console.log(2+3+4+'haha'+5+6)  //9haha56
+
+
+
+
+
+
+
+
+var arr=['赵','钱','孙','李']
+for(var i in arr){
+	console.log(i)
+}
+
+for(var j=0;j<arr.length;j++){
+	console.log(j)
+}
+
+for(var j=0;j<arr.length;j++){
+	console.log(arr[j])
+}
+
+
+
+//-----------------------对象的方法--------------------------  
+
+var aa='hello world'
+console.log(aa.length);   //11
+console.log(aa.substr(6,2)) //wo
+
+console.log(aa.indexOf('world')>=0 ? '找到相应字符':'没找着...')
+
+
+var dt=new Date();
+console.log(dt.getMonth()+'月'+dt.getDate()+'日')
+
+console.log(Math.floor(3,1415));  //3
+console.log(Math.random());  //返回[0,1)的随机数
+console.log(Math.random()*6+8);  //返回[8,14)的随机数
+
+
+//浏览器对象
+window.confirm('你确定要退出吗?');
+console.log(window.navigator);
+console.log(window.location);
+console.log(window.history);
+
+//window.location.href='http://www.zixue.it';
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body style="color: black">
+       <!-- 内链式css -->
+
+<lable>中国人民人寿保险股份有限公司（简称中国人保寿险），是经国务院同意，中国保险监督管理委员会批准，由中国人保集团为主发起成立的全国性寿险公司。成立于2005年11月，目前注册资本金257.61亿元。主要经营人寿险、健康险、意外险、人身再保险和投资业务。目前公司在34个省市自治区、286个地市、1737县市区都设有面向客户的销售和服务机构，与6万多家银行网</lable>
+<input type='button' value='后退' onclick='javascript:window.history.back();'/>
+
+
+	12&nbsp;3
+	<!--123-->
+	<!-- 456 -->
+	&lt;
+	<lable>789</lable>
+	<br>
+	<br>
+
+	<br>
+	<a href="#123">到底部</a>
+	<!-- 底部有个<a>标签name='123' -->
+	<br>
+	<a href="https://www.baidu.com">到百度</a>
+	<br>
+	<br>
+	<br>
+	<a href="javascript:alert('hello world!陈旭东')">弹出窗口</a>
+    <br>
+	<br>
+	<p onclick="javascript:alert('我被点了一下!')"> 我是一个段落中的文字,我有一个鼠标点击事件</p>
+
+
+	<hr>
+	<h1>我爱中国</h1>
+	<br>
+	<center>康师傅绿藻</center>
+	<br>
+	<p>12345         6789</p>
+	<br>
+	
+	<pre>12345          6788</pre>
+	<!-- 多个空格有效 -->
+	<pre></pre>
+	<font size="20" color="red" face="隶书">陈旭东</font>
+	<b>陈旭东</b>
+	<i>陈旭东</i>
+	O<sub>2</sub>
+	4<sup>2</sup>
+	<!-- 强调文字,斜体/加粗 -->
+	<em></em>
+	<strong></strong>
+
+	<small></small>
+	<big></big>
+	<big><big><big>陈旭东</big></big></big>
+	<u>陈旭东</u>
+
+<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="http://www.baidu.com"  title='这将链接到1' ><img src="./img/123.jpg" alt="这是一张美女图"  border="5"></a><br>
+	<br>
+	<br>
+	<br>
+	
+
+	
+<!-- 有序/无序列表 -->
+	<ol type="i" value="6">
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ol>
+
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+
+
+<!-- 表单控件 -->
+<form action="www.123132.com"></form>
+
+<input type="text">123
+<input type="password">
+<input type="submit">
+<input type="reset">
+<input type="button" value="123">
+<input type="radio" name="sex">男
+<input type="radio" name="sex">女
+<input type="checkbox" checked="">乒乓球
+<input type="checkbox">足球
+<input type="file">足球
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+<br>
+<!-- 列表选择框 -->
+<select name="" id="" size="10" multiple>
+   <option value="x1">选项a</option>
+   <option value="x2">选项b</option>
+   <option value="x3">选项c</option>
+</select>
+<br>
+
+<!-- 表格操作 -->
+   	<table border="2"><caption >表格</caption>
+   		<tr><th>姓名</th><th>年龄</th></tr>
+   		<tr><td rowspan="2">小王</td><td>21</td></tr>
+   		<tr><td>小红</td><td>20</td></tr>
+   	</table>
+   	<br>
+
+<!--  <frameset cols='90,*' frameborder="1"> 
+   	<frame frameborder="1">123
+   	<frame frameborder="1">123
+   	</frameset>        frameset在这里不行,需在head之后替代body
+   	-->
+   	<table frame='box' rules="all">
+   	<!-- frame外框设置,rules单元格之间的边框设置 -->
+   		<tr><td>789</td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td></tr>
+   		<tr><td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td></tr>
+   		<tr><td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td></tr>
+   		<tr><td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td></tr><td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<tr><td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td>
+   		<td></td></tr>
+   	</table>
+   	<span>每天进步一点点</span>
+   	<span>每天进步一点点</span>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<div>全世界也不能阻止你成功</div>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<br>
+   	<div class='div' >全世界也不能阻止你成功
+   	<div class="diva">
+   	    <div class='divaa'>中国人民人寿保险股份有限公司（简称中国人保寿险），是经国务院同意，中国保险监督管理委员会批准，由中国人保集团为主发起成立的全国性寿险公司。成立于2005年11月，目前注册资本金257.61亿元。主要经营人寿险、健康险、意外险、人身再保险和投资业务。目前公司在34个省市自治区、286个地市、1737县市区都设有面向客户的销售和服务机构，与6万多家银行网</div>
+
+   	</div>
+   	<div class="divb"></div>
+
+   	</div>
+
+	<div class="divd">
+	<p>联系QQ:782590844</p>
+
+	</div>
+	<!-- 这样联系qq的div在下面,浏览次数的div在上面,需要通过z-index更改优先级 -->
+	 <div class="divc">
+	 <span class="spanc">浏览次数:1000</span>
+
+	 </div>
+
+	 <div class="big">
+	 	<div class="left">left</div>
+	 	<div class="right">right</div>
+	 	<div class="bottom">bottom</div>
+	 </div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a name="123">666666</a>
+</body>
+</html>
+
+
+
+
+ <!--    <script>
+    alert('我放在html之后,后弹出!')
+    </script> -->

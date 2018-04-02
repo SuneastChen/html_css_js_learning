@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('我启动了jquery!')
+	    	var v_jquery=$('#name')  //根据id获取jQuery对象,是数组对象,数组中的元素是Dom对象★
+	    	alert(v_jquery.val())   //调用jQuery对象的方法
+
+	    	var v_dom=v_jquery[0];  //将jQuery对象转换成Dom对象(脱衣服)
+	    	alert(v_dom.value)
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	<input type="text" id='name' value="张三">
+   
+</body>
+</html>

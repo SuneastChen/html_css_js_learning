@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+function adddong(){
+	var li=document.createElement('li');
+	var txt=document.createTextNode('冬')
+	li.appendChild(txt);
+
+
+	var ul=document.getElementsByTagName('ul')[0];
+	ul.appendChild(li);
+}
+
+</script>
+
+
+
+</head>
+<body>
+<input type="button" value="加个'冬'" onclick='adddong();'>
+<ul>
+	<li>春</li>
+	<li>夏</li>
+	<li>秋</li>
+</ul>
+
+	
+</body>
+</html>

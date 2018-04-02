@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('我启动了jquery!')
+
+	    	//val(传参)可以设置文本框,单选,多选框,下拉列表框的值
+	    	alert($('#name').val())   //val()不传参为获得value
+	    	$('#name').val('张大三')  //传参为设置value
+	    	
+	    	alert($('#sel').val())
+	    	$('#sel').val(2)
+	    
+	    })
+	    
+
+	</script>
+</head>
+<body>
+
+	<input type="text" id="name" value="张三"><br>
+	<select name="" id="sel">
+		<option value="0">请选择班级</option>
+		<option value="1">601</option>
+		<option value="2">602</option>
+	</select>
+
+</body>
+</html>

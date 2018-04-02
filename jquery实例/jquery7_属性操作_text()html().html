@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('我启动了jquery!')
+	    	alert($('#div1').html())
+	    	alert($('#div1').text())
+	    	//对于#div1 无区别,相同
+	    	alert($('#div2').html())   //<a href=''>你好</a>  (获取html内容)
+	    	alert($('#div2').text())   //你好  (获取纯文本,不包括html)
+
+
+	    	$('#div3').html("<a href=''>我是被jquery设置的div3</a>");   //成功设置成超链接
+	    	$('#div4').text("<a href=''>我是被jquery设置的div4</a>");   //全部被设成纯文本显示
+
+
+
+	    
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	<div id="div1">你好</div>
+	<div id="div2"><a href=''>你好</a></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+
+</body>
+</html>

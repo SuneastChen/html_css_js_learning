@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+function tuo() {
+	var time=document.getElementsByName('time')[0];
+	var img=document.getElementById('meinv')
+	var ntime=parseInt(time.value)-1;
+	time.value=ntime;
+	if(ntime==0){
+		img.src='../img/tuo.jpg'
+		clearInterval(clock);     //达到0时清除变量定时器
+
+	}	
+}
+//setTimeout,setInterval为window的命令,故传入的代码要加''
+//window.setTimeout('huang()',3000)    //倒计时多长时间执行代码
+var clock=window.setInterval('tuo()',1000);   //每隔一段时间执行代码一次 ---------需要赋给一个变量
+
+</script>
+
+
+
+
+</head>
+<body>
+    <input type="button" name='time' value='5'>
+    <br>
+	<img id='meinv' src="../img/chuang.jpg" alt="">
+</body>
+</html>

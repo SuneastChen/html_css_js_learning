@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('jquery已启动!')
+
+	    	var v_img=$('#img1')    //定义一个全局变量对象
+            function bianda(){
+	    		v_img.attr('width','20%')
+	    		$(this).val('是我让她变大的!')    //this 代表点触发的那个对象
+	    	}
+	    	$('#button1').bind('click',bianda)   //.bind('事件',回调函数)
+
+	    	$('#button2').bind('click',function(){
+	    		v_img.attr('width','10%')
+	    		$('#button1').val('图片变大')
+
+	    	})
+	    
+	    })
+	    
+
+	 
+
+	</script>
+</head>
+<body>
+	<img src="img\\chuang.jpg" alt="" width="10%" id="img1">
+	<br>
+	<input type="button" value="图片变大"  id="button1">
+	<input type="button" value="图片变小" id='button2'>
+
+
+</body>
+</html>

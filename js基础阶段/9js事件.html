@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+function f1() {
+	document.getElementsByTagName('input')[0].style.border='3px solid green'
+}
+
+function f2(){
+	var inp=document.getElementsByTagName('input')[0];
+	if(inp.value==''){
+ 		inp.style.border='3px solid red'
+		alert('请填写用户名!')
+		setTimeout(function(){inp.focus();},10)    //10毫秒后将使其获得焦点
+	}else{
+		inp.style.border=''
+	}
+}
+
+function f3(){
+	var inp=document.getElementsByTagName('input')
+	alert(inp[0].value)
+	alert(inp[1].value)
+	if((inp[0].value=='') || (inp[1].value=='')){
+		alert('请填写完整!')   //倒霉的孩,一定要用==,而不是=
+		
+	}
+	return false     //需要return
+}
+
+function f4() {
+	document.getElementsByTagName('p')[0].style="color:red;font-family:'经典美黑简';border:solid 2px blue"
+}
+
+
+</script>
+
+
+
+</head>
+
+
+
+<body onload="f4()">
+<p>事件发生的瞬间,将发生位置,时间,鼠标按键,触发的节点等信息,被打包成一个对象<br>
+此对象,系统自动传递给事件函数的第一个参数
+</p>
+
+<form action="js事件9.html" onsubmit="return f3()">
+<!-- 加return 浏览器判断,输入值不会被清空 -->
+<!--   onfocus=' ',onblur=' ' -->
+	<pre>用户名:<input type="text" onfocus="f1()" onblur="f2()"></pre>
+	<pre>密  码:<input type="text" ></pre>
+	<input type="submit" >   <!-- 表单提交事件不可加在这里 -->
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('jquery已启动!')    
+	    	$('#button1').attr('onclick',"js()")
+	    })         //这个是页面加载完成自动执行这里面的代码
+
+
+	    function js(){
+	    	var v_num1=$('#num1').val();
+	    	var v_num2=$('#num2').val();
+	    	var v_num3=(v_num1*1)+(v_num2*1)   //也可以用parseInt()来转换成数字
+	    	$('#num3').val(v_num3)
+
+	    }     //这个是onclick事件的函数,只有点击才会执行
+
+
+	    
+
+	</script>
+</head>
+<body>
+	第一个数:
+	<input type="text" id='num1'>
+	<br>
+	第二个数:
+	<input type="text" id='num2'>
+	<br>
+	计算结果:
+	<input type="text" id="num3">
+	<br>
+	<input type="button" id="button1" value="开始计算" >
+
+</body>
+</html>

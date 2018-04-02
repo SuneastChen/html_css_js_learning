@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<script>
+
+
+
+
+//用正常的函数
+
+function t1(){
+    var a1=11;
+    function b1(){
+        alert(a1++)
+        return a1
+    }
+    return b1;
+
+}
+
+var tmp1=t1();
+var a1=100;
+console.log(tmp1());     //输出为12
+
+
+
+
+
+
+
+
+//匿名函数的写法
+function t2(){
+    var a2=22;
+    return function(){
+        alert(a2++);
+        return a2++;
+    }
+}
+
+var tmp2=t2();
+var a2=200;
+console.log(tmp2())      //输出为23
+
+
+
+
+
+
+
+//用立即执行函数也可以,只需再执行一次
+var t3=(function(){
+    var a3=33;
+    return function(){
+        alert(a3++);
+        return a3++;
+    }
+})()
+console.log(t3());    //输出为34
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

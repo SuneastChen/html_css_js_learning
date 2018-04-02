@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id='div1' style="height: 300px;width: 300px;border-width: 3px;border-style: solid;margin: 10%">中国
+
+		<div id='div2' style="height: 200px;width: 200px;border-width: 2px;border-style: solid;margin: 10%">江苏
+
+			<div id='div3' style="height: 100px;width: 100px;border-width: 1px;border-style: solid;margin: 10%">沭阳
+			</div>
+		</div>
+	</div>
+	
+</body>
+	
+
+
+<script>
+var div1=document.getElementById('div1')
+var div2=document.getElementById('div2')
+var div3=document.getElementById('div3')
+
+
+//默认为冒泡方式执行
+// div1.addEventListener('click',function () {alert('我是中国')})
+// div2.addEventListener('click',function () {alert('我是江苏')})
+// div3.addEventListener('click',function () {alert('我是沭阳')})
+
+
+
+//第三个参数为是否捕捉方式执行
+// div1.addEventListener('click',function () {alert('我是中国')},true)
+// div2.addEventListener('click',function () {alert('我是江苏')},true)
+// div3.addEventListener('click',function () {alert('我是沭阳')},true)
+
+
+
+//停止传播
+div1.addEventListener('click',function () {alert('我是中国')})
+div2.addEventListener('click',function () {alert('我是江苏')})
+div3.addEventListener('click',function (event) {
+	alert('我是沭阳');
+	event.stopPropagation();
+})
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>

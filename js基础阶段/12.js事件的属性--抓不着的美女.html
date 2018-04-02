@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	img{width:5%;height: 5%;position: relative;top:30px;left: 30px}
+</style>
+	
+</head>
+<body>
+
+	<img src="../img/123.jpg" alt="">
+</body>
+
+<script>
+var img=document.getElementsByTagName('img')[0]
+
+img.onmouseover=function (ev) {
+	ev=window.event || ev;   //为了各浏览器兼容
+	// alert(this)    //this指的是img对象本身
+	// alert(ev.clientX)
+	// alert(ev.screenX)
+	// alert(ev.pageX)
+	// alert(ev.X)
+
+	this.style.left=ev.pageX+50+'px'
+	this.style.top=ev.pageY+5+'px'
+
+}
+</script>
+
+</html>

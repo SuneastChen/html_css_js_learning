@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    //alert(document.getElementById('name').value)  不可以在此用,因为id为'name'还未加载到
+	    alert(1)
+	    $(function(){
+	    	alert('我启动了jquery!')
+	    })
+	    
+	    alert(2)
+	    // 先弹出1,2,再弹出'我启动了jquery',因为当所有页面元素加载完成,才会执行 $(function(){jquery代码}) 
+	</script>
+</head>
+<body>
+	<input type="text" id='name' value="张三">
+    <script>
+        alert(document.getElementById('name').value)
+    </script>
+</body>
+</html>

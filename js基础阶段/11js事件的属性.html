@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="../img/chuang.jpg" alt="美女图片">
+</body>
+
+<script>
+document.getElementsByTagName('img')[0].onclick=function(ev){
+	ev=window.event || ev;   //为了各浏览器兼容
+	alert('禽兽,住手!\n 请看控制台的事件属性');
+	console.log(ev.type);
+	console.log(ev);      //查看事件的所有属性
+}
+</script>
+
+
+
+</html>

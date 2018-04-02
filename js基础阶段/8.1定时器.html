@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+function huang() {
+	var img=document.getElementById('meinv')
+	if(img.src.indexOf('chuang.jpg')>=0){
+		img.src='../img/tuo.jpg'
+	}
+	else{
+		img.src='../img/chuang.jpg'
+	}
+	
+}
+//setTimeout,setInterval为window的命令,故传入的代码要加''
+//window.setTimeout('huang()',3000)    //倒计时多长时间执行代码
+window.setInterval('huang()',2000);   //每隔一段时间执行代码一次
+
+</script>
+
+
+
+
+</head>
+<body>
+	<img id='meinv' src="../img/chuang.jpg" alt="">
+</body>
+</html>

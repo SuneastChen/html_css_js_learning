@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+<style>
+	div{width: 300px;height: 100px;border: 1px solid red;}
+</style>
+
+
+
+</head>
+
+<body>
+	<div>
+		<p>
+			<ul>
+				<li>魏</li>
+				<li>蜀</li>
+				<li>吴</li>
+			</ul>
+		</p>
+	</div>	
+</body>
+
+
+
+<script>
+	var div=document.getElementsByTagName('div')[0]
+//事件写在script中
+
+//第一种用普通函数写法
+	// function bian() {
+	// 	div.style.border='5px solid blue';
+	// }
+	// div.onclick=bian;      //事件写在script中不要加()
+	
+//第二种用匿名函数
+	// div.onclick=function(){div.style.border='5px solid blue';}
+
+//第三种传入元素对象本身
+	div.onclick=function(){this.style.border='5px solid blue';}
+
+</script>
+
+
+
+</html>

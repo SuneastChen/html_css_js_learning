@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+<script>
+
+//1.通过原型继承
+function Cat(){
+    this.catch=function(){
+        alert('我会抓老鼠!')
+    }
+}
+
+function Tiger(){
+    this.hunt=function(){
+        alert('我会打猎!')
+    }
+}
+Tiger.prototype=new Cat();  //new一个cat对象,放到造虎机里,作为他的原型
+
+var tiger1=new Tiger();
+tiger1.hunt();
+tiger1.catch();    //老虎也会抓老鼠了
+
+Tiger.prototype.song=function(){
+    alert('我会唱歌!');  //给造虎机的原型加一个方法
+}
+tiger1.song();  //所有的老虎都会唱歌了
+
+console.log(tiger1);
+console.log(tiger1.__proto__);  //Cat{}
+console.log(tiger1.__proto__.__proto__)   //Object{}
+console.log(tiger1.__proto__.__proto__.__proto__)   //Object{}
+console.log(tiger1.__proto__.__proto__.__proto__.__proto__)   //null
+
+
+//2.原型冒充继承
+function Good(){
+    this.iq=120;
+    this.study=function(){
+        console.log('高效学习法');
+    }
+}
+
+function Bad(){
+    Good.call(this);   //把好孩子叫过来冒充一下
+    this.play=function(){
+        console.log('lol cf QQ飞车');
+    }
+}
+var badstudent1=new Bad();
+console.log(badstudent1)
+badstudent1.study();   //坏孩子也会高效学习了
+
+
+
+
+//3.复制继承
+function Goodd(){
+    this.iq=120;
+    this.study=function(){
+        console.log('高效学习法');
+    }
+}
+function Badd(){
+    this.play=function(){
+        console.log('lol cf QQ飞车');
+    }
+    this.super_ability=function(obj){    //拥有复制他人的超能力
+    	for(var k in obj){
+    		this[k]=obj[k];
+    	}
+    }
+}
+var goodstudent2=new Goodd()
+var badstudent2=new Badd()
+badstudent2.super_ability(goodstudent2)   //把一个好孩子对象放进去复制
+badstudent2.study()     //坏孩子又可以学习了
+
+</script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

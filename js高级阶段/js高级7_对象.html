@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+<script>
+
+//js中的对象
+var bird1={};   //创建一个空对象
+bird1.leg=2;    //加属性
+bird1.song=function(){  //加方法
+    alert('小黄鹂,纠纠纠...')
+}
+bird1.song();   //执行方法
+delete bird1.song;  //删除方法
+
+
+
+//函数也是一个对象
+function t(a,b,c){
+}
+console.log(t.length);  //length代表函数形参的数量
+console.log(t.name);  //name为函数名
+
+
+
+//js中没有类,但有构造函数,也是用来创建对象的
+function Dog(name,color){
+    this.name=name;
+    this.color=color;
+    this.run=function(){
+        alert('我是'+this.name+'我在奔跑...')
+    }
+}
+var dog1=new Dog('哮天犬','black');
+console.log(dog1)
+dog1.run()
+dog1.color='red';   //通过对象.属性可以直接更改属性
+console.log(dog1.color)
+
+
+
+
+//js中的私有属性,通过var 闭包实现
+function Girl(name,lover){
+    var name=name;
+    var lover=lover;
+    this.get_name=function(){
+        return name;
+    }
+    this.get_lover=function(){
+        return lover;
+    }
+}
+var girl1=new Girl('紫女','卫庄');
+console.log(girl1);     //是个空对象,看不到私有属性
+console.log(girl1.get_lover());
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

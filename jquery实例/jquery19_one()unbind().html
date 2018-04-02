@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+.img1
+
+</style>
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	//alert('jquery已启动!')
+	    	$('#onebut1').one('click',function(){alert('按钮1被点击了一次!')})
+	    	         //.one() 为对象绑定只能执行一次的行为
+	    	$('#onebut2').bind('click',function(){alert('按钮2被点击了一次!');
+	                                              $(this).unbind('click')})
+	    	                                      //为对象取消绑定事件
+
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	
+	<input type="button" id="onebut1" value="绑定一次事件按钮">
+	<input type="button" id="onebut2" value="自定义绑定一次按钮">
+</body>
+</html>

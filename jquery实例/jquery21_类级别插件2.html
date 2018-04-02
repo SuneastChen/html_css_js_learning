@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style>
+#div1{width: 150px;height: 150px;background: #f90}
+</style>
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+    
+<script>
+     $(function(){
+      var div=$('#div1');
+      div.css({
+        'top':($(window).height()-div.height())/2,
+        'left':($(window).width()-div.width())/2,
+        'position':'absolute'
+      })
+
+      });
+  
+
+
+</script>
+ 
+
+</head>
+<body>
+    <div id="div1"></div>
+
+</body>
+
+
+</html>

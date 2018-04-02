@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert($('#img').attr('src'))      //获取属性的值
+	    	alert('将改变图片的src属性')
+	    	$('#img').attr('src',"img\\tuo.jpg")   //改变属性的值
+	    	alert('将改变输入框的value属性')
+	    	$('#inp').attr('value',"张三是个大坏蛋")
+	    	alert('将改变复选框的checked属性')
+	    	$('#checkbox').attr('checked',true)    //这样便可设置全选,返选等操作
+
+	    
+	    })
+	    
+
+	</script>
+</head>
+<body>
+    <input type="text" id="inp" value="张三"><br>
+	<input type="checkbox" id="checkbox">乒乓球 </br>
+	<img id='img' src="img\chuang.jpg">
+
+
+</body>
+</html>

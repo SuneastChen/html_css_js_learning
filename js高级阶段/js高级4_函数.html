@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+<script>
+
+(function(a,b,c){
+    alert(arguments);  //(字典)对象
+    alert(arguments[0]); //a参数的实参'hello'
+    alert(arguments[1]);  //b参数的实参'word'
+    alert(arguments.callee)   //输出本函数的所有代码
+})('hello','word','!');
+
+</script>
+
+
+
+</head>
+<body>
+	
+</body>
+</html>

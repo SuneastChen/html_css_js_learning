@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	$('#div2').hide()
+	    	$('#button1').toggle(function(){$('#div2').show();$(this).val('收起')},
+	    		                function(){$('#div2').hide();$(this).val('更多')})
+
+	                   //.toggle(fun,fun,fun...)   单击事件依次循环执行各函数
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	<input type="button" value="更多" id="button1">
+	<div>
+		西游2 <br>
+		乘风破浪 <br>
+		大闹天竺 <br>
+		
+	</div>
+	<div id="div2">
+	    功夫瑜珈 <br>
+		生化危机 <br>
+		战狼2 <br>
+		猩球大战 <br>
+		机械姬 <br>
+	</div>
+
+</body>
+</html>

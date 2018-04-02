@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="点我运行命令">
+    <input type="button" value="删我删掉一个">
+    
+</body>
+<script>
+var bts=document.getElementsByTagName('input');
+var haha=function(){alert('haha')};     //函数表达式
+function hehe(){         //函数申明
+    alert('hehe')
+}
+
+bts[0].addEventListener('click',haha);  //高级事件绑定  对象.addEventListener('事件',函数)
+bts[0].addEventListener('click',hehe); //如果此处加hehe()则打开网页即时运行,后面不再运行
+
+bts[1].onclick=function(){
+    bts[0].removeEventListener('click',haha)
+}
+</script>
+
+
+
+</html>

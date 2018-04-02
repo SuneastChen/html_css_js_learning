@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+<script>
+area=[['沭阳','泗阳','泗洪'],['梅村','东亭','南禅寺']]
+function ch(){
+	var shi=document.getElementById('shi');
+	var xianzhen=document.getElementById('xianzhen');
+	var neirong =''
+	if(shi.value=='-1'){
+		neirong=''
+	}
+	else{
+        for(var i=0;i<area[shi.value].length;i++){
+		//alert(area[shi.value][i])
+		
+		neirong+='<option>'+area[shi.value][i]+'</option>'
+		//alert(neirong)
+
+	    }
+
+	}
+
+	
+	
+    xianzhen.innerHTML=neirong
+
+
+}
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+
+<select name="" id="shi" onchange="ch();">
+   <option value="-1">请选择</option>
+   <option value="0">宿迁</option>
+   <option value="1">无锡</option>
+</select>
+
+<select name="" id="xianzhen">
+</select>
+
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript' src='jquery21_1.js'></script>
+
+
+
+</head>
+<body>
+	<input type="button" value="button1" id="button1">
+	<input type="button" value="button2" id="button2">
+	<input type="button" value="button3" id="button3">
+	<input type="button" value="button4" id="button4">
+	<div id='div1' style="height: 150px;width: 250px;border: solid 2px red"></div>
+</body>
+  	<script>
+  	var a='我是传入的参数a'
+  	$('#button1').click(function(){
+  		$.myAlert(a);
+  	})
+
+
+  	$('#button2').click(function(){
+  		$.myAlert2(a)
+  	})
+
+
+	$('#button3').click(function(){
+  		$.myAlert3()
+  	})
+
+
+	$('#button4').click(function(){
+  		$.zxit.myAlert4()
+  	})
+
+
+  	</script>
+
+</html>

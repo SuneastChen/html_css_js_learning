@@ -1,0 +1,45 @@
+lable{color: black;font-size:30px;background: pink;font-family:'经典美黑简', '楷体';
+      text-indent:48px;letter-spacing:8px;line-height:38px;}
+body{background-image: url('./img/456.jpg');background-position: 0px 0px;background-repeat: repeat-x;}
+									/* 指定第一张图片的起始位置坐标, 默认重复方式为铺满 */
+
+
+/*伪元素选择器*/
+a:link{color:yellow;font-size: 40px}
+a:hover{color:red;font-size: 60px}
+a:active{color:black;font-size: 80px}
+a:visited{color:white;font-size: 40px}
+image:hover{width: 800px;height: 800px}
+
+ol{list-style-type:square;}
+div{color:#fff;}
+span{background-color: green;color:#fff;border: solid 10px black;padding: 10px;margin:0px;}
+body{padding:0px;margin: 0px}
+/*这样就可以顶边显示了,body和span都有那三个属性*/
+
+.div{width: 600px;height: 600px;background-color: green;margin: 0 auto}
+.diva{width: 300px;height: 300px;background-color: red;float: left;}
+.divb{width: 300px;height: 300px;background-color: blue;float:left;}
+/*margin: 0 auto 外边距设为0*/
+.divc{width: 300px;height: 300px;background-color: blue;position: relative;left:50px;bottom: 30px}
+.spanc{border: 0px ;padding: 0px;margin:0px; 
+/*.spanc有的属性用自已的样式,没有的用span标签的样式,样式的优先级问题*/
+   position: absolute;
+   top:10px;right: 0
+   }
+/*根据父元素定位*/
+.divd{background-color: black;width: 200px;height: 60px;position: fixed;top:300px;z-index: 1}
+/*每个盒模型的z-index默认为0,然后根据代码的先后顺序显示,可以通过z-index调整,值越高,越在上面*/
+
+.big{width: 850px;height: 900px;background-color: white;margin: 0 auto}
+.left{width: 350px;height: 600px;background-color: red;float: left;}
+.right{width: 500px;height: 600px;background-color: yellow;float: right;margin-bottom: 10px}
+.bottom{width: 850px;height: 300px;background-color: blue;clear: both;}
+/*当div中有多个div,float实现排版分布,只有left,right两种,
+下方分布的div可以清除以上浮动影响clear:both,哪个div要清除影响,就加在哪个div中
+   若想之间有距离,则在上方的div中加入margin-bottom属性,下方的div加clear:both
+   或者再加一个div类名为clear,专门用于清除浮动.clear{margin-top:10px;clear:both;}*/
+
+.divaa{color: black;width: 100px;height: 200px;background-color: yellow;overflow: auto;}
+/*overflow: auto;当内容超出div时的处理,hidden(隐藏),scroll(一律加滚动条),auto(超出时自动添加滚动条)*/
+

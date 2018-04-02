@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('我启动了jquery!')
+	    	var v_dom=document.getElementById('name');  //获取Dom对象
+	    	alert(v_dom.value)
+
+
+	    	var v_jquery=$(v_dom);  //将Dom对象转抽象成jQuery对象(穿上jQuery的衣服)
+	    	alert(v_jquery.value)   //jQuery对象不能使用Dom的属性.value
+	    	alert(v_jquery.val())   //调用jQuery对象的方法
+
+
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	<input type="text" id='name' value="张三">
+   
+</body>
+</html>

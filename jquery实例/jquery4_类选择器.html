@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('我启动了jquery!')
+	    	alert($('.name').length)
+	    	 //dom对象与jquery对象都有length属性
+	    	alert($('.name').val())
+	    	 //若不指定操作哪个Dom对象,则默认为第一个
+	    	alert($($('.name')[1]).val())
+	    	 //j_myclass[1]为Dom对象,要想使用jquery的方法,必须再穿上jquery的衣服$(),变成元组才行
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	<input type="text" class="name" value="张三"><br>
+	<input type="text" class="name" value="李四"><br>
+
+   
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+function ch(){
+	var mm=document.getElementById('meinv')
+	if(mm.src.indexOf('chuang.jpg')>=0){
+		mm.src='../img/tuo.jpg'
+	}
+	else{
+		mm.src='../img/chuang.jpg'
+	}
+}
+
+
+</script>
+
+</head>
+<body>
+	<img id='meinv' src="../img/chuang.jpg" alt="" onclick='ch();'>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<style>
+#div1{height: 300px;width: 300px;border: solid 2px blue;background:orange;}
+</style>
+
+
+<script>
+
+
+console.log('普通函数中的this:')
+function a(){
+    this.age=23;
+}
+a();    //window对象调用此函数,this指的是window
+console.log(age)  //故可以调用,age变成了全局变量
+console.log(window.age)    
+//函数中带有this的变量,不可直接调用,否则会污染全局变量,应该先new一个对象,通过对象调用
+
+
+
+console.log('在对象的方法中用this:')
+function intro(){
+    console.log('my name is ' + this.name)
+}
+
+var dog1={name:'旺财',intro:intro};   //创建一个对象,方法函数也是值,作为属性存放在对象中
+dog1.intro();  //执行方法
+
+var cat1={name:'咪咪'};
+cat1.intro=intro;
+cat1.intro();
+
+
+
+
+console.log('在构造函数中用this:')
+function Dog(name,age){
+    this.name=name;
+    this.age=age;
+    this.bark=function(){
+        console.log('this is ' + this.name);
+    }
+}
+var dog2=new Dog('大黑',3);
+dog2.bark();
+    
+console.log('在构造函数用return无效:')
+function Pig(){
+	this.age=99;
+	return 'abc';   //构造函数用来创建对象,不可用return,被忽略
+}
+
+var pig1=new Pig();
+console.log(pig1);
+
+
+
+
+
+console.log('在call() apply():')
+function intro(a,b,c){
+    console.log('my name is ' + this.name +a+b+c)
+}
+
+var dog1={name:'旺财'}; //创建一个对象
+intro.call(dog1,'aa1','bb1','cc1')      //函数.call(对象,参数1,参数2)
+intro.apply(dog1,['aa2','bb2','cc2'])   //函数.apply(对象,[参数1,参数2])
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    <div id="div1">请看控制台console的执行结果</div>
+</body>
+</html>

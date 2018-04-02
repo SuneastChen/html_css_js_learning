@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('remove div1')
+	    	$('#div1').remove()    //移除整个div
+	    	alert('empty div2')
+	    	$('#div2').empty()    //清空div的内容,仍保留div
+
+
+
+	    
+	    })
+	    
+
+	</script>
+</head>
+<body>
+	第一个div开始
+	<div id='div1' style="background: red">hello</div>
+	第一个div结束
+	<br>
+	第二个div开始
+	<div id='div2' style="background: blue">world!</div>
+	第二个div结束
+
+</body>
+</html>

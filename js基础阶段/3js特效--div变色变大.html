@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+
+<style>
+#div1{background: yellow}
+#div2{background: blue}
+
+</style>
+
+
+<script>
+function ch(){
+    var divv=document.getElementsByTagName('div')[0];
+//让其交替变色
+    if(divv.id=='div1'){
+        divv.id='div2'
+    }
+    else{
+        divv.id='div1'
+    };
+
+//让其逐渐变大
+    var hw=parseInt(divv.style.height)
+    divv.style.height=hw+50+'px'
+    divv.style.width=hw+50+'px'
+
+//让其下边框逐渐变大
+    divv.style.borderBottomWidth=parseInt(divv.style.borderBottomWidth)+5+'px'
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+    <div id='div1' onclick='ch();' style="width: 300px;height: 300px;border:solid 3px red;">
+    标签属性和DOM对象属性的对应关系:
+    但也有例外: div class='main'中操作class属性用 divobj.className
+    <br>
+    css属性和DOM对象属性的对应关系:
+    例外情况:css属性中大部分带有横线的,如style='border-top-style'
+    对应DOM的属性操作obj.style.borderTopStyle
+    
+    </div>
+</body>
+</html>

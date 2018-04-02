@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style>
+	.img1{width:20%}
+	.img2{width:30%;height:30%;border-style:solid;border-width:5px;border-color:blue}
+</style>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    		
+	    		$('#img1').hover(function(){$(this).addClass('img2')},function(){$(this).removeClass('img2')})      //需要加到启动jquery中
+	 
+
+	    	//也可以用$('img1').blind('onmouseover',function(){}),
+	    	//$('img1').blind('onmouseout',function(){})
+	    })
+
+
+	    //或者html中的元素加入onclick='函数名()' ---->> 此函数定义在script中 与jquery自动启动函数并列
+
+	</script>
+</head>
+<body>
+	<img  id='img1' src="img\\chuang.jpg" alt="" class="img1">
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('jquery已启动!')
+	    	$('#button1').click(function(){$('#img1').attr('width','20%');})
+	    			//事件的行为
+	    	$('#button2').click(function(){$('#button1').click();})
+	    	       //#button2的点击的行为function(){}
+	    	                                       // $('#button1').click();触发#button1点击
+	    
+	    })
+	    
+
+
+	</script>
+</head>
+<body>
+	<img src="img\\chuang.jpg" alt="" width="10%" id="img1">
+	<br>
+	<input type="button" value="图片变大" id="button1">
+	<input type="button" value="模拟点击<图片变大>" id='button2'>
+
+
+</body>
+</html>

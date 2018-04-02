@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('jquery已启动!')
+
+	    	$('#button1').click(function(){ 
+	    	       //#button1绑定点击的行为function(){}
+	    	       
+	    	       //$('#sub').click(); // 模拟#sub点击,触发实现表单提交
+	    	       //$('#form1').submit();  //直接触发实现表单提交行为
+
+	    	})
+
+
+
+	    	$('#sub').click(function(){   //阻止默认提交行为
+	    		alert('点击了提交按钮!')
+	    		return false;
+	    	
+	    	})
+	    	                                       
+	    
+	    })
+	    
+
+	    
+
+	</script>
+</head>
+<body>
+	<form action="aaa.jsp" id='form1'>
+		姓名<input type="text"> <br>
+		<input type="submit" value="提交" id="sub">
+		<input type="button" value="自定义按钮" id="button1">
+	</form>
+
+</body>
+</html>

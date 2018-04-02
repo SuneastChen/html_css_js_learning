@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div{width: 200px;height: 200px;}
+	.test1{background: black}
+	.test2{background: red}
+
+	</style>
+
+<script>
+
+function ch(){
+	var aa=document.getElementsByTagName('div')[0];
+	if(aa.className=='test1'){     //他妈的,要用==来判断
+		aa.className='test2'
+	}
+	else {
+		aa.className='test1'
+	}
+
+
+}
+
+</script>
+
+
+
+
+</head>
+<body>
+    <h1>特效是什么?</h1>
+	<div class="test1"  onclick='ch();'></div>
+</body>
+</html>

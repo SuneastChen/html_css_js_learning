@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<input type="button" value="标注有邮箱的孩子">
+<ul>
+	<li>关羽(guangy@qq.com)</li>
+	<li>张飞(不听话没邮箱)</li>
+	<li>赵云(zhaoyun@163.cn)</li>
+	<li>马超(mchao@sina.com.cn)</li>
+	<li>黄忠(老了不会玩邮箱)</li>
+</ul>
+	
+</body>
+
+
+<script>
+var lis=document.getElementsByTagName('li');
+var patt=/\w+@\w+([.]\w+)+/
+document.getElementsByTagName('input')[0].onclick=function(){
+	for(var i=0;i<=lis.length;i++){
+	// alert(patt.exec(lis[i].innerHTML))
+	if(patt.exec(lis[i].innerHTML)!=null){
+		lis[i].style.background='yellow';
+	}
+
+    }
+}
+
+
+</script>
+
+
+
+
+</html>

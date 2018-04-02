@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery.js' type='text/javascript' charset='utf-8'></script>
+
+
+	<script type='text/javascript'>
+	    $(function(){
+	    	alert('我启动了jquery!')
+	    	alert($('.name').length)    //4个 ,即所有的类名为name的dom
+	    	alert($('div > .name').length)    //2个,获取div 下面所有 类名为name 的子dom,不包括孙dom
+	    	alert($($('div > .name')[1]).val())
+	    
+	    })
+	    
+
+	</script>
+</head>
+<body>
+<div>
+	<input type="text" class="name" value="张三"><br>
+	<input type="text" class="name" value="李四"><br>
+	<ul>
+		<li><input type="text" class="name" value="zhangsan"><br></li>
+	</ul>
+</div>
+	<input type="text" class="name" value="wangwu"><br>
+   
+</body>
+</html>
